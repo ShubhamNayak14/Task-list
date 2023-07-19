@@ -13,7 +13,7 @@
 		<h1>Task List</h1>
 		<form id="new-task-form">
 			<input type="text" id="new-task-input" placeholder="What do you have planned?">
-			<input type="sumit" id="new-task-submit" value="Add task">
+			<button type="submit" id="new-task-submit">Add Task</button>
 		</form>
 	</header>
 
@@ -21,26 +21,7 @@
 		<section class="task-list">
 			<h2>Tasks</h2>
 			<div id="tasks">
-				<div class="task">
-					<div class="content">
-						<input type="text" class="text" value="My shiny Task" readonly>
-					</div>
-					<div class="actions">
-						<button class="edit">Edit</button>
-						<button class="delete">Delete</button>
-					</div>
-				</div>
-			</div>
-			<div id="tasks">
-				<div class="task">
-					<div class="content">
-						<input type="text" class="text" value="My shiny Task" readonly>
-					</div>
-					<div class="actions">
-						<button class="edit">Edit</button>
-						<button class="delete">Delete</button>
-					</div>
-				</div>
+	
 			</div>
 		</section>
 	</main>
@@ -56,6 +37,7 @@
 				e.preventDefault();
 
 				const task = input.value;
+				// console.log(task);
 
 				const task_el = document.createElement('div');
 				task_el.classList.add('task');
@@ -68,7 +50,8 @@
 				const task_input_el = document.createElement('input');
 				task_input_el.classList.add('text');
 				task_input_el.type = 'text';
-				task_input_el.value = task;
+
+				task_input_el.value = `${task}`;
 				task_input_el.setAttribute('readonly', 'readonly');
 
 				task_content_el.appendChild(task_input_el);
