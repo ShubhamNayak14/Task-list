@@ -1,11 +1,10 @@
 :root{
-    --dark: #374151;
+    --dark: #a8dadc;
     --darker: #1F2937;
     --dartest:#111827;
     --gray:#687280;
     --light:#EEE;
-    --pink:#EC4899;
-    --purple:#885cf6;
+    --color:#457b9d;
 }
 *{
     box-sizing: border-box;
@@ -16,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: var(--dark);
+    background: var(--color);
     color: #fff;
 }
 header{
@@ -28,7 +27,7 @@ header{
 header h1{
     font-size: 2.5rem;
     font-weight: 300;
-    color: var(--gray);
+    color: var(--light);
     margin-bottom: 1rem;
 }
 #new-task-form{
@@ -50,15 +49,12 @@ input, button{
     font-size: 1.225rem;
 }
 #new-task-input{
-    color: var(--gray);
+    color: var(--light);
 }
 #new-task-submit{
-    color: var(--pink);
+    color: var(--dark);
     font-size: 1.25rem;
     font-weight: 700;
-    background-image: linear-gradient(to right,var(--pink),var(--purple));
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -80,7 +76,7 @@ main{
 .task-list h2{
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--gray);
+    color: var(--light);
     margin-bottom: 1rem;
 }
 #tasks .task{
@@ -102,7 +98,7 @@ main{
     transition: 0.4s
 }
 #tasks .task .content .text:not(:read-only){
-    color: var(--pink);
+    color: var(--dark);
 }
 #tasks .task .actions{
     display: flex;
@@ -123,10 +119,8 @@ main{
     opacity: 0.6;
 } 
 .task .actions .edit{
-    /* background-image: #EEE; */
-    background-image: linear-gradient(to right,var(--pink),var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+color: var(--dark);
+  
 }
 .task .actions .delete{
     color: #fff;
